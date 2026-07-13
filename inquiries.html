@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Enquiries — Bzain Beauty</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">B</span>
+          <span>Bzain Beauty &amp; Company</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="admin.html">Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="padding:2rem 0;">
+      <h1>Saved enquiries</h1>
+      <p class="eyebrow">Local enquiries stored in your browser</p>
+
+      <div id="controls" style="margin:1rem 0;display:flex;gap:0.75rem;">
+        <button id="refresh" class="btn">Refresh</button>
+        <button id="export" class="btn btn-primary">Export CSV</button>
+        <button id="clear" class="btn btn-secondary">Clear all</button>
+      </div>
+
+      <div id="empty" style="color:var(--muted);">No enquiries found.</div>
+      <div id="list" style="margin-top:1rem;display:grid;gap:0.75rem;"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Bzain Beauty &amp; Company. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="inquiries.js"></script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -53,8 +53,49 @@
             </ul>
           </div>
 
-          <div class="hero-panel">
+          <div class="hero-panel reveal">
+            <div class="hero-highlight">
+              <h3>Move your beauty routine</h3>
+              <p>Tap the button to glide into our services section and discover the perfect look.</p>
+              <button id="moveButton" class="btn btn-secondary">Move to Services</button>
+            </div>
             <img src="https://images.unsplash.com/photo-1570158268183-d296b2892211?w=600&h=400&fit=crop" alt="Professional beauty treatment" class="hero-image" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="photo-slider">
+        <div class="container section-heading">
+          <p class="eyebrow">Salon highlights</p>
+          <h2>Slide through our favorite salon moments.</h2>
+          <p>Explore a rotating gallery of hair, makeup, and beauty transformations.</p>
+        </div>
+        <div class="container slider reveal">
+          <div class="slider-track">
+            <div class="slide active">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&h=560&fit=crop" alt="Hair styling session" />
+              <div class="slide-caption">Expert hair styling for every event.</div>
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1552880954-842b63c91d4a?w=900&h=560&fit=crop" alt="Relaxing facial treatment" />
+              <div class="slide-caption">Relaxing skincare treatments with luxury products.</div>
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1598827166235-91fef8609e94?w=900&h=560&fit=crop" alt="Makeup application" />
+              <div class="slide-caption">Flawless makeup looks for every occasion.</div>
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1590654175212-53ee9e01a451?w=900&h=560&fit=crop" alt="Nail artistry service" />
+              <div class="slide-caption">Nail artistry that completes your polished look.</div>
+            </div>
+          </div>
+          <button class="slider-nav prev" aria-label="Previous slide">‹</button>
+          <button class="slider-nav next" aria-label="Next slide">›</button>
+          <div class="slider-dots">
+            <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+            <button class="dot" data-index="1" aria-label="Slide 2"></button>
+            <button class="dot" data-index="2" aria-label="Slide 3"></button>
+            <button class="dot" data-index="3" aria-label="Slide 4"></button>
           </div>
         </div>
       </section>
@@ -189,11 +230,62 @@
             </div>
           </div>
           <div class="contact-card">
-            <h3>Contact us</h3>
+            <h3>Book an appointment</h3>
+            <p id="bookingCount" class="booking-count">0 saved bookings</p>
             <p>123 Glam Street, West End</p>
             <p>+256 700 123 456</p>
             <p>hello@bzainbeauty.com</p>
-            <a href="mailto:hello@bzainbeauty.com" class="btn btn-primary">Send an enquiry</a>
+            <form id="bookingForm" class="booking-form" novalidate>
+              <div class="form-row">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" required />
+              </div>
+
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+
+              <div class="form-row">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" required />
+              </div>
+
+              <div class="form-row">
+                <label for="service">Service</label>
+                <select id="service" name="service" required>
+                  <option value="">Choose a service</option>
+                  <option>Hair styling</option>
+                  <option>Skincare</option>
+                  <option>Makeup</option>
+                  <option>Nail artistry</option>
+                  <option>Beauty consultation</option>
+                </select>
+              </div>
+
+              <div class="form-row form-grid">
+                <div>
+                  <label for="date">Date</label>
+                  <input id="date" name="date" type="date" required />
+                </div>
+                <div>
+                  <label for="time">Time</label>
+                  <input id="time" name="time" type="time" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="notes">Notes (optional)</label>
+                <textarea id="notes" name="notes" rows="3"></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Request booking</button>
+                <button type="button" id="clearForm" class="btn btn-secondary">Clear</button>
+              </div>
+
+              <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+            </form>
           </div>
         </div>
       </section>
